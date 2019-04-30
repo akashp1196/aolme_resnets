@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm /mnt/$1/results/*
+
+python /app/main.py --root_path /mnt/$1 --video_path videos/jpg --annotation_path ucf101_01.json --result_path results --dataset ucf101 --n_classes 2 --n_finetune_classes 2 --test --test_subset test --ft_begin_index 4 --model resnet --model_depth 34 --resnet_shortcut A --batch_size 128 --n_threads 4 --checkpoint 5
+
+python /app/utils/aolme_accuracy.py /mnt/$1/results/test.json > /mnt/$1/results/aolme_stats.txt

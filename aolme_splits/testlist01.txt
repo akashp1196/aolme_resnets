@@ -1,0 +1,11 @@
+writing/student1_writing_564.avi 1
+writing/student1_writing_581.avi 1
+writing/student1_writing_582.avi 1
+writing/student1_writing_583.avi 1
+writing/student1_writing_591.avi 1
+typing/student1_typing_578.avi 2
+typing/student2_typing_134.avi 2
+typing/student2_typing_521.avi 2
+typing/student2_typing_531.avi 2
+typing/student2_typing_541.avi 2
+typing/student2_typing_542.avi 2

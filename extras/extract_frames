@@ -1,0 +1,16 @@
+#!/bin/bash
+
+rm -r /mnt/$1
+
+mkdir /mnt/$1
+mkdir /mnt/$1/results
+mkdir /mnt/$1/videos
+mkdir /mnt/$1/videos/jpg
+
+python /app/utils/video_jpg_ucf101_hmdb51.py /mnt/aolme_videos /mnt/$1/videos/jpg
+
+python /app/utils/n_frames_ucf101_hmdb51.py /mnt/$1/videos/jpg
+
+python /app/utils/aolme_json.py /app/aolme_splits
+
+mv /app/aolme_splits/ucf* /mnt/$1
